@@ -92,13 +92,6 @@ window.$docsify = {
         //绑定windows.$docsify.fileUrl，以#开始，没有文件后缀名
         window.$docsify.fileUrl = `#/${vm.route.path}`
 
-        //通过postMessage向官网发送消息
-        const message = {
-          fileName: window.$docsify.fileName,
-          fileUrl: window.$docsify.fileUrl
-        }
-        window.postMessage(message,officialWebsiteUrl)
-
         //预处理markdown
         return resolveFootNote(resolveAnchor(escapeCode(html)))
       })
