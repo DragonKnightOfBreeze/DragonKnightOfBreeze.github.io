@@ -8,4 +8,3 @@ wearing a dark windbreaker and a cocked hat that symbolizes the identity of char
 ![](../assets/images/windkid_girl_in_the_great_library.png ":size=480")
 
 <div class="image-note">Painter: 凪白みと</div>
-
