@@ -23,12 +23,6 @@ window.$docsify = {
       "/en/": "Search Document"
     }
   },
-  pagination: {
-    previousText: "Prev",
-    nextText: "Next",
-    crossChapter: true,
-    crossChapterText: true
-  },
   copyCode: {
     buttonText: 'Copy Code',
     errorText: 'Error',
@@ -63,6 +57,12 @@ window.$docsify = {
       className: "info"
     }
   },
+  pagination: {
+    previousText: "Prev",
+    nextText: "Next",
+    crossChapter: true,
+    crossChapterText: true
+  },
 
   markdown: {
     renderer: {
@@ -77,22 +77,13 @@ window.$docsify = {
 
   plugins: [
     function(hook, vm) {
-      //console.log(vm)
-
       hook.init(function() {
         redirectLocation()
         bindServiceCssClass()
       })
 
       hook.beforeEach(function(html) {
-        //console.log(html)
-
-        //绑定window.$docsify.fileName，以斜线开始
-        window.$docsify.fileName = `/${vm.route.file}`
-        //绑定windows.$docsify.fileUrl，以#开始，没有文件后缀名
-        window.$docsify.fileUrl = `#/${vm.route.path}`
-
-        //预处理markdown
+        bindVariables(vm)
         return resolveFootNote(resolveAnchor(escapeCode(html)))
       })
       hook.doneEach(function() {
@@ -140,7 +131,15 @@ function redirectLocation() {
   }
 }
 
-//绑定判断设备的css class
+//绑定自定义变量
+function bindVariables(vm) {
+  //绑定window.$docsify.fileName，以斜线开始
+  window.$docsify.fileName = `/${vm.route.file}`
+  //绑定windows.$docsify.fileUrl，以#开始，没有文件后缀名
+  window.$docsify.fileUrl = `#/${vm.route.path}`
+}
+
+//绑定用于判断设备类型的css class
 function bindServiceCssClass(){
   const isMobile = /ipad|iphone|ipod|android|blackberry|windows phone|opera mini|silk/i.test(navigator.userAgent)
   const bodyElement = document.querySelector("body")
