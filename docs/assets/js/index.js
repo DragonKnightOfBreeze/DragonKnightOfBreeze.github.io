@@ -2,7 +2,7 @@ const repositoryUrl = "https://github.com/HotDB-Community/hotdb-documents"
 const officialWebsiteUrl = "https://www.hotdb.com"
 
 window.$docsify = {
-  name: "微风的龙骑士的Github主页",
+  name: "windea.icu",
   nameLink: {
     "/zh/": "#/zh/",
     "/en/": "#/en/"
@@ -99,14 +99,14 @@ window.$docsify = {
         window.$docsify.fileName = `/${vm.route.file}`
         //绑定windows.$docsify.fileUrl，以#开始，没有文件后缀名
         window.$docsify.fileUrl = `#/${vm.route.path}`
-        
+
         //通过postMessage向官网发送消息
         const message = {
           fileName: window.$docsify.fileName,
           fileUrl: window.$docsify.fileUrl
-        } 
+        }
         window.postMessage(message,officialWebsiteUrl)
-        
+
         //预处理markdown
         return resolveFootNote(resolveAnchor(escapeCode(html)))
       })
@@ -163,11 +163,11 @@ function bindServiceCssClass(){
     bodyElement.classList.add("mobile")
     window.$docsify.isMobile = true
   }else{
-	bodyElement.classList.add("web")  
+	bodyElement.classList.add("web")
   }
 }
 
-const codeRegex = /(`[^`\r\n]+`)/g 
+const codeRegex = /(`[^`\r\n]+`)/g
 const pipeCharRegex = /\|/g
 
 //需要转义内联代码中的管道符，需要将`ps -ef | grep java`转义为`ps -ef \| grep java`，docsify的bug
