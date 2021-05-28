@@ -1,11 +1,9 @@
 /* Copy from: https://cdn.jsdelivr.net/npm/docsify/themes/buble.css */
 
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Inconsolata-Bold");
-
+@import url("https://fonts.googleapis.com/css?family=Consolas|Consolas-Bold");
 :root {
   --theme-color: #0074d9;
 }
-
 * {
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
@@ -128,7 +126,7 @@ li input[type='checkbox'] {
 }
 .app-nav li {
   display: inline-block;
-  margin: 0 1rem;
+  margin: 0 .5rem;
   padding: 5px 0;
   position: relative;
   cursor: pointer;
@@ -153,7 +151,6 @@ li input[type='checkbox'] {
   display: block;
   font-size: 14px;
   line-height: 1rem;
-  margin: 0;
   margin: 8px 14px;
   white-space: nowrap;
 }
@@ -274,7 +271,6 @@ main.hidden {
   background: rgba(136, 136, 136, 0.1);
 }
 .sidebar-toggle {
-  background-color: transparent;
   background-color: rgba(255, 255, 255, 0.8);
   border: 0;
   outline: none;
@@ -284,7 +280,7 @@ main.hidden {
   left: 0;
   text-align: center;
   transition: opacity 0.3s;
-  width: 0;
+  width: 284px;
   z-index: 30;
   cursor: pointer;
 }
@@ -308,7 +304,7 @@ body.sticky .sidebar-toggle {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 16rem;
+  left: 300px;
   transition: left 250ms ease;
 }
 .markdown-section {
@@ -316,6 +312,9 @@ body.sticky .sidebar-toggle {
   max-width: 80%;
   padding: 30px 15px 40px 15px;
   position: relative;
+}
+.mobile .markdown-section {
+  max-width: 90%;
 }
 .markdown-section > * {
   box-sizing: border-box;
@@ -346,7 +345,7 @@ body.sticky .sidebar-toggle {
 .markdown-section th {
   border: 1px solid #ddd;
   font-weight: bold;
-  padding: 6px 13px;
+  padding: 6px 12px;
 }
 .markdown-section td {
   border: 1px solid #ddd;
@@ -398,7 +397,7 @@ body.sticky .sidebar-toggle {
   list-style-type: none;
 }
 body.close .sidebar {
-  transform: translateX(-16rem);
+  transform: translateX(-300px);
 }
 body.close .sidebar-toggle {
   width: auto;
@@ -435,7 +434,7 @@ body.close .content {
   }
 
   .sidebar {
-    left: -16rem;
+    left: -300px;
     transition: transform 250ms ease-out;
   }
 
@@ -459,18 +458,18 @@ body.close .content {
   }
 
   body.close .sidebar {
-    transform: translateX(16rem);
+    transform: translateX(300px);
   }
 
   body.close .sidebar-toggle {
     background-color: rgba(255, 255, 255, 0.8);
     transition: 1s background-color;
-    width: 0;
+    width: 284px;
     padding: 10px;
   }
 
   body.close .content {
-    transform: translateX(16rem);
+    transform: translateX(300px);
   }
 
   body.close .app-nav,
@@ -620,6 +619,8 @@ section.cover blockquote > p > a:hover {
   list-style: none;
   margin: 0;
   padding: 0.2em 0 0.2em 0;
+  font-size: 14px;
+  font-weight: 400;
 }
 .sidebar ul li ul {
   padding: 0;
@@ -653,29 +654,47 @@ section.cover blockquote > p > a:hover {
   word-spacing: 0.05rem;
 }
 .markdown-section h1 {
-  font-size: 2rem;
-  font-weight: 500;
-  margin: 0 0 1rem;
+  font-size: 1.5rem !important;
+  margin: 1.5rem 0 1rem 0;
+}
+.markdown-section h1 * {
+  font-size: 1.5rem !important;
 }
 .markdown-section h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin: 0 0 1rem 0;
-  padding: 1rem 0 0 0;
+  font-size: 1.4rem !important;
+  margin: 1.5rem 0 1rem 0;
+}
+.markdown-section h2 * {
+  font-size: 1.4rem !important;
 }
 .markdown-section h3 {
-  font-size: 1.5rem;
-  margin: 52px 0 1.2rem;
+  font-size: 1.3rem !important;
+  margin: 1.5rem 0 1rem 0;
+}
+.markdown-section h3 * {
+  font-size: 1.3rem !important;
 }
 .markdown-section h4 {
-  font-size: 1.25rem;
+  font-size: 1.2rem !important;
+  margin: 1.5rem 0 1rem 0;
+}
+.markdown-section h4 * {
+  font-size: 1.2rem !important;
 }
 .markdown-section h5 {
-  font-size: 1rem;
+  font-size: 1.1rem !important;
+  margin: 1.5rem 0 1rem 0;
+}
+.markdown-section h5 * {
+  font-size: 1.1rem !important;
 }
 .markdown-section h6 {
+  font-size: 1.1rem !important;
+  margin: 1.5rem 0 1rem 0;
   color: #777;
-  font-size: 1rem;
+}
+.markdown-section h6 * {
+  font-size: 1.1rem !important;
 }
 .markdown-section figure,
 .markdown-section p,
@@ -710,17 +729,16 @@ section.cover blockquote > p > a:hover {
 .markdown-section code {
   background-color: #f9f9f9;
   border-radius: 3px;
-  font-family: Inconsolata;
+  font-family: Consolas monospace;
   padding: 0.2em 0.4rem;
   white-space: nowrap;
 }
 .markdown-section pre {
   background-color: #f9f9f9;
   border-left: 2px solid #eee;
-  font-family: Inconsolata;
+  font-family: Consolas monospace;
   font-size: 16px;
   margin: 0 0 1em 0;
-  padding: 8px;
   padding: 0 10px 12px 0;
   overflow: auto;
   word-wrap: normal;
@@ -788,7 +806,7 @@ section.cover blockquote > p > a:hover {
   background-color: #f8f8f8;
   border-radius: 2px;
   display: block;
-  font-family: Inconsolata;
+  font-family: Consolas sans-serif;
   line-height: 1.1rem;
   max-width: inherit;
   overflow: inherit;
@@ -806,4 +824,11 @@ code .token {
   min-height: 1.5rem;
   position: relative;
   left: auto;
+}
+thead tr td {
+  /*表格标题居中显示*/
+  text-align: center;
+  /*表格标题强制不换行*/
+  word-break: keep-all;
+  white-space: nowrap;
 }

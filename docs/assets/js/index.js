@@ -1,13 +1,5 @@
-const repositoryUrl = "https://github.com/HotDB-Community/hotdb-documents"
-const officialWebsiteUrl = "https://www.hotdb.com"
-
 window.$docsify = {
-  name: "windea.icu",
-  nameLink: {
-    "/zh/": "#/zh/",
-    "/en/": "#/en/"
-  },
-  repo: repositoryUrl,
+  repo: "https://github.com/DragonKnightOfBreeze/dragonknightofbreeze.github.io",
   routeMode: "history",
   relativePath: true,
   auto2top: true,

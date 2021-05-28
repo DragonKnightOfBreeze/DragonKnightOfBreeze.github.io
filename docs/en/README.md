@@ -1,3 +1,6 @@
-# 风之遗迹的大图书馆
+# The Great Library In The Wind Ruins
 
-旧时，曾有一位被后人称为导师的风之子，带领追随她的龙与龙骑士们，将世间的故事和传说写入风的讯息，带到远方的诸国度，乃至苍穹之上的群星之间。——如今，这是每个风之子都应知道的童话故事。
+There is a tale that in the ancient ruins guarded by the nation of wind for generations,  
+localed a great library that does not seem to belong to this world.  
+And the librarian of this pure and flawless library is a girl with long white hair and crimson eyes  
+wearing a dark windbreaker and a cocked hat that symbolizes the identity of charmer.
