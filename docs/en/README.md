@@ -4,3 +4,6 @@ There is a tale that in the ancient ruins guarded by the nation of wind for gene
 And the librarian of this pure and flawless library is a girl with long white hair and crimson eyes wearing a dark windbreaker and a cocked hat that symbolizes the identity of charmer.
 
 ![](../assets/images/windkid_girl_in_the_great_library.png)
+
+<div style="font-size: 12px;font-style: italic;color: grey;">Painter: 凪白みと</div>
+
