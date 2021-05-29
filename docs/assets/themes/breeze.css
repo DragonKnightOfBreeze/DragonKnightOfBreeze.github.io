@@ -391,14 +391,14 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 .markdown-section ul.task-list > li {
   list-style-type: none;
 }
-body.close .sidebar {
-  transform: translateX(-20rem);
+body.content-close .sidebar {
+  transform: translateX(-20rem)
 }
-body.close .sidebar-toggle {
-  width: auto;
+body.content-close .sidebar-toggle {
+  width: auto
 }
-body.close .content {
-  left: 0;
+body.content-close .content {
+  left: 0
 }
 @media print {
   .github-corner, .sidebar-toggle, .sidebar, .app-nav {
@@ -447,22 +447,22 @@ body.close .content {
     padding: 30px 30px 10px 10px;
   }
 
-  body.close .sidebar {
+  body.content-close .sidebar {
     transform: translateX(20rem);
   }
 
-  body.close .sidebar-toggle {
+  body.content-close .sidebar-toggle {
     background-color: rgba(255, 255, 255, 0.8);
     transition: 1s background-color;
     width: 284px;
     padding: 10px;
   }
 
-  body.close .content {
+  body.content-close .content {
     transform: translateX(20rem);
   }
 
-  body.close .app-nav, body.close .github-corner {
+  body.content-close .app-nav, body.content-close .github-corner {
     display: none;
   }
 
