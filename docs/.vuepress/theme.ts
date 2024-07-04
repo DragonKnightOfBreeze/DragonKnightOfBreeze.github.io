@@ -55,7 +55,7 @@ export default hopeTheme({
         '/en/': ['en-US', 'en-UK', 'en'],
       },
     },
-    search: {      
+    search: {
       locales: {
         '/zh/': {
           placeholder: '搜索',

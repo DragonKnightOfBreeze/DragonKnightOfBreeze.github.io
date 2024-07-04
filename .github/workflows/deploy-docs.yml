@@ -10,6 +10,8 @@ jobs:
   deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
+      - run: cd docs/
+        
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -20,14 +22,14 @@ jobs:
           run_install: true
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4 
         with:
           node-version: 20
           cache: pnpm
 
       - name: Build documentation site
         run: pnpm docs:build
-        
+      
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
