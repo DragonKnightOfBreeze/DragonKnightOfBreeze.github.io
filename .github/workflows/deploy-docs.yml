@@ -8,10 +8,11 @@ on:
 
 jobs:
   deploy-gh-pages:
+    defaults: 
+      run: 
+        working-directory: docs
     runs-on: ubuntu-latest
     steps:
-      - run: cd docs/
-        
       - name: Checkout
         uses: actions/checkout@v4
 
