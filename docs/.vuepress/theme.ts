@@ -65,6 +65,13 @@ export default hopeTheme({
         },
       },
     },
+    mdEnhance: {
+      gfm: true,
+      breaks: false,
+      attrs: true,
+      alert: true,
+      footnote: true,
+    }
   },
 })
 
