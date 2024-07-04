@@ -8,13 +8,12 @@ on:
 
 jobs:
   deploy-gh-pages:
-    defaults: 
-      run: 
-        working-directory: docs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - run: cd docs
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
