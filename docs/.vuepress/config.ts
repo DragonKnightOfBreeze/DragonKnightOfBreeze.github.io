@@ -6,7 +6,6 @@ import viteBundler from "@vuepress/bundler-vite";
 export default defineUserConfig({
   base: '/',
   head,
-  lang: '/zh/',
   locales: {
     '/zh/': {
       lang: 'zh-CN',
