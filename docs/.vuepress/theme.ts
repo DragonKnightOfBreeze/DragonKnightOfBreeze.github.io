@@ -49,7 +49,6 @@ export default hopeTheme({
     redirect: {
       autoLocale: true,
       switchLocale: 'direct',
-      defaultLocale: 'zh',
       localeConfig: {
         '/zh/': ['zh-CN', 'zh-TW', 'zh'],
         '/en/': ['en-US', 'en-UK', 'en'],
