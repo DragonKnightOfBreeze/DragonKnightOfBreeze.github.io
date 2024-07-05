@@ -54,14 +54,12 @@ export default hopeTheme({
         '/en/': ['en-US', 'en-UK', 'en'],
       },
     },
+    //note that fulltext search is not supported by @vuepress/plugin-search (only for titles)
     search: {
+      maxSuggestions: 20,
       locales: {
-        '/zh/': {
-          placeholder: '搜索',
-        },
-        '/en/': {
-          placeholder: 'Search',
-        },
+        '/zh/': { placeholder: '搜索', },
+        '/en/': { placeholder: 'Search', },
       },
     },
     mdEnhance: {

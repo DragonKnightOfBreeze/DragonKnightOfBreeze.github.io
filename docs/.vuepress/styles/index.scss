@@ -12,11 +12,11 @@
 //custom styles
 
 .portrait-image {
-  @media (min-width: 960px) {
+  @media (min-device-height: 1080px) {
     width: 480px;
     height: 480px;
   }
-  @media (min-width: 1440px) {
+  @media (min-device-width: 1440px) {
     width: 720px;
     height: 720px;
   }
