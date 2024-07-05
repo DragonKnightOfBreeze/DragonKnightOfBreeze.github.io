@@ -1,6 +1,8 @@
 ---
 pageInfo: []
 lastUpdated: false
-editLink: false
 contributors: false
+editLink: false
+prevLink: false
+nextLink: false
 ---
